@@ -3,6 +3,9 @@
 # Docs: https://wowchemy.com/docs/page-builder/
 widget: tag_cloud
 
+# Activate this widget? true/false
+active: true
+
 # This file represents a page section.
 headless: true
 
@@ -10,7 +13,7 @@ headless: true
 weight: 120
 
 title: Popular Topics
-subtitle: ''
+subtitle: ""
 
 content:
   # Choose the taxonomy from `config.toml` to display (e.g. tags, categories)

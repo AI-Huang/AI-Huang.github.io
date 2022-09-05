@@ -3,6 +3,9 @@
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: pages
 
+# Activate this widget? true/false
+active: false
+
 # This file represents a page section.
 headless: true
 
@@ -10,17 +13,17 @@ headless: true
 weight: 90
 
 title: Recent Publications
-subtitle: ''
+subtitle: ""
 
 content:
   # Filter on criteria
   filters:
     folders:
       - publication
-    tag: ''
-    category: ''
-    publication_type: ''
-    author: ''
+    tag: ""
+    category: ""
+    publication_type: ""
+    author: ""
     exclude_featured: false
     exclude_future: false
     exclude_past: false
@@ -33,9 +36,13 @@ content:
 design:
   # Choose a view for the listings:
   view: citation
-  columns: '2'
+  columns: "2"
 ---
 
 {{% callout note %}}
 Quickly discover relevant content by [filtering publications](./publication/).
 {{% /callout %}}
+
+Weak Reject, Kan Huang, Ming Liu. 2021. GreenEyes: An Air Quality Level Fitting Model based on WaveNet.
+CIKM (demo).
+Code: https://github.com/AI-Huang/AirEvaluation
