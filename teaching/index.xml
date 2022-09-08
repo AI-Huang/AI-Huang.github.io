@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Teaching | Academic</title><link>https://ai-huang.github.io/teaching/</link><atom:link href="https://ai-huang.github.io/teaching/index.xml" rel="self" type="application/rss+xml"/><description>Teaching</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 13 Sep 2021 14:23:00 +0800</lastBuildDate><image><url>https://ai-huang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Teaching</title><link>https://ai-huang.github.io/teaching/</link></image><item><title>Course Lecturer, Greedy Technology</title><link>https://ai-huang.github.io/teaching/course_lecturer/</link><pubDate>Mon, 13 Sep 2021 14:23:00 +0800</pubDate><guid>https://ai-huang.github.io/teaching/course_lecturer/</guid><description>&lt;p>&lt;a target="_blank" href="https://uai.greedyai.com/">Greedy Technology&lt;/a> is a company based in Beijing. It focuses on teaching students machine learning knowledge and related technical applications, with a professional educating team. I assisted this company as a Course Lecturer during Oct. 2021 to Apr. 2022, and designed one basic tutorial and five application courses.&lt;/p>
+&lt;p>Tutorial:&lt;/p>
+&lt;ul>
+&lt;li>Chatbot based on RNN and PyTorch&lt;/li>
+&lt;/ul>
+&lt;p>Application Courses:&lt;/p>
+&lt;ul>
+&lt;li>Object Detection based on Faster RCNN&lt;/li>
+&lt;li>Image Style Transfer based on Neural Style&lt;/li>
+&lt;li>Image Captioning based on RNN,
+&lt;i class="fas fa-code pr-1 fa-fw">&lt;/i> &lt;a target="_blank" href="https://github.com/AI-Huang/ImageCaptioning">Code&lt;/a>&lt;/li>
+&lt;li>Earthquake Prediction based on WaveNet,
+&lt;i class="fas fa-code pr-1 fa-fw">&lt;/i> &lt;a target="_blank" href="https://github.com/AI-Huang/LANL_Earthquake_Prediction">Code&lt;/a>&lt;/li>
+&lt;li>Logo Synthesis based on iWGAN&lt;/li>
+&lt;/ul></description></item><item><title>Course Designer</title><link>https://ai-huang.github.io/teaching/course_designer/</link><pubDate>Thu, 25 Apr 2019 20:49:00 +0800</pubDate><guid>https://ai-huang.github.io/teaching/course_designer/</guid><description>&lt;p>Many people are interested about start-ups on education industries in Hong Kong. During Apr. 2019 to May. 2019, I served as Course Designer to help several entrepreneurship founders design lectures and courses to introduce knowledge in the university to common high school students.&lt;/p>
+&lt;p>I designed a lecture which introduces the prelimilary background of ECE.
+&lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> Download my &lt;a target="_blank" href="https://docs.google.com/presentation/d/1WF-Nrc0zMbXW6NHoZSGQavefwHPqnoOU/edit?usp=sharing&amp;ouid=115182618927559529877&amp;rtpof=true&amp;sd=true">PPT on Introduction to ECE&lt;/a>.&lt;/p>
+&lt;p>In the meanwhile, I have designed several tiny embedded projects to enhance the understanding of the background of ECE:&lt;/p>
+&lt;ul>
+&lt;li>Running Water Lights;&lt;/li>
+&lt;li>Electronic Voter.&lt;/li>
+&lt;/ul></description></item><item><title>Teaching Assistant</title><link>https://ai-huang.github.io/teaching/teaching_assistant/</link><pubDate>Wed, 01 Feb 2017 00:00:00 +0800</pubDate><guid>https://ai-huang.github.io/teaching/teaching_assistant/</guid><description>&lt;p>I have served as Teaching Assistant for one year and a half at HKUST. Courses I served as TA:&lt;/p>
+&lt;ul>
+&lt;li>ELEC2600: Stochastic Processes&lt;/li>
+&lt;li>ELEC6910R: Robotic Perception and Learning&lt;/li>
+&lt;/ul>
+&lt;p>ELEC6910R is a very interesting course about deep learning and robotics taught by my supervisor &lt;a target="_blank" href="https://ram-lab.com/people/">Prof. Ming LIU&lt;/a>.&lt;/p>
+&lt;p>
+&lt;i class="fas fa-download pr-1 fa-fw">&lt;/i> Download the &lt;a target="_blank" href="https://drive.google.com/drive/folders/1ozymE1rmwsNDzfHjA8pMABRnCE6OKDaJ?usp=sharing">course materials here&lt;/a>.&lt;/p></description></item></channel></rss>
