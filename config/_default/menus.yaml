@@ -5,8 +5,41 @@
 
 main:
   - name: Home
-    url: "#about"
+    identifier: home
+    url: /
     weight: 10
+  - name: Skills
+    parent: home
+    url: "#skills"
+    weight: 10
+  - name: Experience
+    parent: home
+    url: "#experience"
+    weight: 20
+  - name: Entrepreneurship
+    parent: home
+    url: "#entrepreneurship"
+    weight: 30
+  - name: Courses
+    parent: home
+    url: "#courses"
+    weight: 40
+  - name: Awards
+    parent: home
+    url: "#awards"
+    weight: 200
+
+  # Reserve for future feature
+  # - name: Tags
+  #   identifier: tags
+  #   url: "#Tags"
+  #   weight: 15
+  # - name: Academic
+  #   parent: tags
+  #   url: tags/academic/
+  #   weight: 10
+
+  # Reserve for future usage of listing events
   # - name: Events
   # url: "events"
   # weight: 15

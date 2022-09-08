@@ -72,4 +72,4 @@ Kelley Kan HUANG is an engineer of the Hong Kong Applied Science and Technology 
 
 Kan's research interests include Neural Networks, Machine Learning, Representation Learning and Natural Language Processing. He also has some AIoT and Robotics experience.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my <a target="_blank" href="https://drive.google.com/file/d/1KZkYdvdKsDgwys5ZmLILB9xS9-CFQp9o/view?usp=sharing">resumé</a>.
