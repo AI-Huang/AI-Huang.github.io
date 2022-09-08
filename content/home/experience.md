@@ -37,6 +37,14 @@ experience:
         * Analysing
         * Modelling
         * Deploying
+  - title: Research Intern
+    company: ManpowerGroup HK
+    company_url:
+    company_logo: org-gc
+    location: Hong Kong
+    date_start: "2021-05-01"
+    date_end: "2021-08-01"
+    description:
 
 design:
   columns: "2"
