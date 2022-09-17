@@ -39,19 +39,18 @@ main:
   #   url: tags/academic/
   #   weight: 10
 
-  # Reserve for future usage of listing events
-  # - name: Events
-  # url: "events"
-  # weight: 15
+  - name: Events
+    url: "events"
+    weight: 20
   - name: Posts
     url: "posts"
-    weight: 20
+    weight: 30
   - name: Projects
     url: "projects"
-    weight: 30
+    weight: 40
   - name: Teaching
     url: "teaching"
-    weight: 40
+    weight: 50
   # - name: Publications
   # url: '#featured'
   # weight: 50
