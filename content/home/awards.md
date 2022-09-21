@@ -33,7 +33,7 @@ item:
     organization_url:
     title: Education Funding Scholarship of HUSTHKAA
     url: ""
-  - certificate_url:
+  - certificate_url: "/events/seedcup2014"
     date_start: "2014-11-01"
     date_end: ""
     description: ""
@@ -41,7 +41,7 @@ item:
     organization_url:
     title: First Prize, Amazon Seed Cup
     url: ""
-  - certificate_url:
+  - certificate_url: https://drive.google.com/file/d/1GI6q-qURrkEjgq3-v91YjeFc2dHYVY5n/view?usp=sharing
     date_start: "2014-09-01"
     date_end: ""
     description: ""
@@ -49,7 +49,7 @@ item:
     organization_url:
     title: National Inspirational Scholarship, 2013‐2014
     url: ""
-  - certificate_url:
+  - certificate_url: https://drive.google.com/file/d/1Go6dmISLnU18zQYdupQrvX6_uSlDgDf1/view?usp=sharing
     date_start: "2013-11-01"
     date_end: ""
     description: ""
