@@ -27,7 +27,7 @@ publishDate: "2022-01-01T00:00:00Z"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *Applied Machine Learning Methods for Time Series Forecasting 2022*
+publication: In *[Applied Machine Learning Methods for Time Series Forecasting 2022](https://amlts.github.io/amlts2022/)*
 publication_short: In *[AMLTS 2022](https://amlts.github.io/amlts2022/)*
 
 abstract: "Accompanying rapid industrialization, humans are suffering from serious air pollution problems. The demand for air quality prediction is becoming more and more important to the government’s policy-making and people’s daily life. In this paper, We propose GreenEyes – a deep neural network model, which consists of a WaveNet-based backbone block for learning representations of sequences and an LSTM with a Temporal Attention module for capturing the hidden interactions between features of multi-channel inputs. To evaluate the effectiveness of our proposed method, we carry out several experiments including an ablation study on our collected and preprocessed air quality data near HKUST. The experimental results show our model can effectively predict the air quality level of the next timestamp given any segment of the air
