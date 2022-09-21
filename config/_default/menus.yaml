@@ -49,7 +49,7 @@ main:
     url: "research"
     weight: 40
   - name: Publications
-    url: "publications"
+    url: "publication"
     weight: 50
   - name: Projects
     url: "projects"
