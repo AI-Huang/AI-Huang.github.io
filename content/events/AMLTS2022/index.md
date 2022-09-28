@@ -70,4 +70,4 @@ slides: ""
 projects: ["air evaluation"]
 ---
 
-Our work has been accepted by Applied Machine Learning Methods for Time Series Forecasting ([AMLTS](https://amlts.github.io/amlts2022/#Papers)) 2022. AMLTS is the conjunction workshop of the top conference ACM International Conference on Information and Knowledge Management ([CIKM](https://www.cikm2022.org/)) 🤗.
+Our work "Kan Huang, Kai Zhang and Ming Liu. GreenEyes: An Air Quality Evaluating Model based on WaveNet" has been accepted by Applied Machine Learning Methods for Time Series Forecasting ([AMLTS](https://amlts.github.io/amlts2022/#Papers)) 2022. AMLTS is the conjunction workshop of the top conference ACM International Conference on Information and Knowledge Management ([CIKM](https://www.cikm2022.org/)) 🤗.
