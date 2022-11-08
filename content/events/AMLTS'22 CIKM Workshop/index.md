@@ -1,10 +1,11 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: 1 paper has been accepted by AMLTS 2022.
+title: Present at the Workshop on Applied Machine Learning Methods for Time Series Forecasting
 
-event: Applied Machine Learning Methods for Time Series Forecasting (AMLTS) 2022
-event_url: https://amlts.github.io/amlts2022/
+event: Workshop on Applied Machine Learning Methods for Time Series Forecasting (AMLTS), co-located with the 31st ACM International Conference on Information and Knowledge Management (CIKM), October 17-21, 2022, Atlanta, USA
+
+event_url: https://www.cikm2022.org/workshops
 
 location: Atlanta, Georgia, USA
 address:
@@ -14,17 +15,17 @@ address:
   postcode:
   country: United States
 
-summary: Our work on time series forecasting has been accepted by AMLTS 2022
+summary: We present our work at the Workshop on Applied Machine Learning Methods for Time Series Forecasting
 abstract:
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2022-09-17T20:18:01+08:00
-date_end: 2022-09-17T20:18:01+08:00
+date: 2022-10-21T08:00:00-04:00
+date_end: 2022-10-21T17:30:00-04:00
 all_day: false
 
 # Schedule page publish date (NOT event date).
-publishDate: 2022-09-17T20:18:01+08:00
+publishDate: 2022-10-21T08:00:00-04:00
 
 authors: [Kan Huang, Kai Zhang, Ming Liu]
 tags: [deep learning, time series forecasting]
@@ -70,4 +71,6 @@ slides: ""
 projects: ["air evaluation"]
 ---
 
-Our work "Kan Huang, Kai Zhang and Ming Liu. GreenEyes: An Air Quality Evaluating Model based on WaveNet" has been accepted by Applied Machine Learning Methods for Time Series Forecasting ([AMLTS](https://amlts.github.io/amlts2022/#Papers)) 2022. AMLTS is the conjunction workshop of the top conference ACM International Conference on Information and Knowledge Management ([CIKM](https://www.cikm2022.org/)) 🤗.
+We present our work "Kan Huang, Kai Zhang and Ming Liu. GreenEyes: An Air Quality Evaluating Model based on WaveNet" at the Workshop on Applied Machine Learning Methods for Time Series Forecasting ([AMLTS'22](https://www.cikm2022.org/workshops)).
+
+{{< figure src="AMLTS Presentation.jpg" caption="AMLTS'22 Presentation" numbered="true" >}}
