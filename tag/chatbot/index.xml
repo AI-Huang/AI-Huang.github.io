@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chatbot | Academic</title><link>https://AI-Huang.github.io/tag/chatbot/</link><atom:link href="https://AI-Huang.github.io/tag/chatbot/index.xml" rel="self" type="application/rss+xml"/><description>chatbot</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 15 Feb 2019 16:02:00 +0800</lastBuildDate><image><url>https://AI-Huang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>chatbot</title><link>https://AI-Huang.github.io/tag/chatbot/</link></image><item><title>Seq2Seq QQ Chatbot</title><link>https://AI-Huang.github.io/projects/seq2seq_qq_chatbot/</link><pubDate>Fri, 15 Feb 2019 16:02:00 +0800</pubDate><guid>https://AI-Huang.github.io/projects/seq2seq_qq_chatbot/</guid><description>&lt;ul>
+&lt;li>Built a chatbot on the QQ platform with the Coolq Framework. Implemented the following functions&lt;/li>
+&lt;li>chatbot: built an application interface for the Seq2Seq model, gave the chatbot the ability to response for users’ input;&lt;/li>
+&lt;li>dictionary command: using Web crawler, the chatbot can return word’s meaning;&lt;/li>
+&lt;li>translate command: using Google translate library, the chatbot can retrive the translation for users’ input;&lt;/li>
+&lt;li>sticker command: the chatbot could query the SQL database to find stickers that users demand;&lt;/li>
+&lt;li>Other features: group members’ same words repeater; weather querying; banning user’s chat; search image by image.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://AI-Huang.github.io/research/seq2seq_chatbot/">The Chatbot&amp;rsquo;s dialogue robot model&lt;/a>.&lt;/p></description></item></channel></rss>
