@@ -51,7 +51,7 @@ links:
     url: https://twitter.com/AI_HUANG_HKUST
 
 # Optional filename of your slides within your event's folder or a URL.
-url_slides:
+url_slides: https://docs.google.com/presentation/d/1gwbS-EDxrCC9FCO2FmBuyPWK47VeNRpZ/edit?usp=share_link&ouid=115182618927559529877&rtpof=true&sd=true
 url_code:
 url_pdf:
 url_video:

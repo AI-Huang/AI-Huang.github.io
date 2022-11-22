@@ -3,7 +3,7 @@
 
 title: "Replication of SENet"
 summary: ""
-authors: []
+authors: [Kan Huang]
 tags: [Replication, SENet, Computer Vision]
 categories: []
 date: 2022-11-22T17:00:00+08:00

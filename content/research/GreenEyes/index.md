@@ -40,6 +40,6 @@ url_video: ""
 slides: ""
 ---
 
-Presentation TBA.
-
 Accepted by _[AMLTS 2022]({{< relref "/publication/AMLTS2022" >}})_.
+
+Presentation available at [AMLTS 2022 Workshop]({{< relref "/events/AMLTS'22 CIKM Workshop" >}}).
