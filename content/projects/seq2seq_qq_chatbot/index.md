@@ -4,7 +4,7 @@
 title: "Seq2Seq QQ Chatbot"
 summary: ""
 authors: []
-tags: []
+tags: [software development, chatbot]
 categories: []
 date: 2019-02-15T16:02:00+08:00
 
