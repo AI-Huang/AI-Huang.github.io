@@ -31,7 +31,7 @@ authors: [Kan Huang, Kai Zhang, Ming Liu]
 tags: [deep learning, time series forecasting]
 
 # Is this a featured event? (true/false)
-featured: false
+featured: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -39,7 +39,7 @@ featured: false
 image:
   caption: ""
   focal_point: Right
-  preview_only: false
+  preview_only: true
 
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
