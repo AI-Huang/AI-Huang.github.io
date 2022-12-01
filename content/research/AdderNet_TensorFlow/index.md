@@ -5,7 +5,7 @@ title: "A TensorFlow Implementation of AdderNet"
 summary: ""
 authors: [Kan Huang]
 tags: [Replication, Computer Vision, TensorFlow, AdderNet]
-categories: [Reading Group]
+categories: [Codes, Networks]
 date: 2021-01-29T17:00:00+08:00
 # Optional external URL for project (replaces project detail page).
 external_link: ""
