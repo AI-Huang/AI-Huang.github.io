@@ -43,4 +43,5 @@ This is a replication of the work SENet ([J. Hu, et al., Squeeze-and-Excitation 
 
 - Implement the SENet module;
 - Apply the SENet module to the ResNet;
-- Re-train the ResNet w/o SENet on CIFAR-10 for benchmark evaluation.
+- Train the ResNet with SENet on CIFAR-10;
+- Use the re-trained benchmark results of ResNet on CIFAR-10 for comparative evaluation.
