@@ -45,7 +45,7 @@ This is a **TensorFlow** replication of experiments on CIFAR-10 mentioned in Res
 - Apply the SENet module to the ResNet;
 - Re-train the ResNet w/o SENet on CIFAR-10 for benchmark evaluation.
 
-For statistical validatioin, each group of experiment has been run for 5 times.
+For statistical validation, each group of experiment has been run for 5 times.
 
 Firstly, I try to reproduce the results with totally the same [model codes](https://github.com/AI-Huang/CV_Playground/blob/master/models/tf_fn/resnet_cifar10.py) given by Keras. The batch size is set to 32. The optimizer is Adam with an initial learning rate 0.001. The validation split is 0, and the whole train set is used as training data. The data augmentation could be found at [keras_augmentation](https://github.com/AI-Huang/CV_Playground/blob/master/data_loaders/tf_fn/data_generator.py). The leanring scheduler could be found at [keras_lr_scheduler](https://github.com/AI-Huang/CV_Playground/blob/master/models/tf_fn/optim_utils.py). Our results outperform Keras's on `ResNet44v1_CIFAR10`, but go worse a little on other models.
 
