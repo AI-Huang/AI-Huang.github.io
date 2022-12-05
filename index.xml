@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Academic</title><link>https://AI-Huang.github.io/</link><atom:link href="https://AI-Huang.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Academic</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 29 Nov 2022 13:19:00 +0800</lastBuildDate><image><url>https://AI-Huang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Academic</title><link>https://AI-Huang.github.io/</link></image><item><title>Benchmark of ResNet on CIFAR-10</title><link>https://AI-Huang.github.io/research/benchmark_resnet/</link><pubDate>Tue, 29 Nov 2022 13:19:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/benchmark_resnet/</guid><description>&lt;p>This is a &lt;strong>TensorFlow&lt;/strong> replication of experiments on CIFAR-10 mentioned in ResNet (&lt;a href="https://arxiv.org/abs/1512.03385" target="_blank" rel="noopener">K. He, et al., Deep Residual Learning for Image Recognition&lt;/a>). My codes:&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Academic</title><link>https://AI-Huang.github.io/</link><atom:link href="https://AI-Huang.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Academic</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Dec 2022 17:28:00 +0800</lastBuildDate><image><url>https://AI-Huang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Academic</title><link>https://AI-Huang.github.io/</link></image><item><title>Replication of SENet</title><link>https://AI-Huang.github.io/research/replication_senet/</link><pubDate>Thu, 01 Dec 2022 17:28:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/replication_senet/</guid><description>&lt;p>This is a replication of the work SENet (&lt;a href="https://arxiv.org/abs/1709.01507" target="_blank" rel="noopener">J. Hu, et al., Squeeze-and-Excitation Networks&lt;/a>). My codes:&lt;/p>
+&lt;ul>
+&lt;li>Implement the SENet module;&lt;/li>
+&lt;li>Apply the SENet module to the ResNet;&lt;/li>
+&lt;li>Train the ResNet with SENet on CIFAR-10;&lt;/li>
+&lt;li>Use the re-trained benchmark results of ResNet on CIFAR-10 for comparative evaluation.&lt;/li>
+&lt;/ul>
+&lt;p>For statistical validation, each group of experiment has been run for 5 times.&lt;/p>
+&lt;p>J. Hu et al.&amp;rsquo;s experiment group uses pad, crop and flip augmentation, while I use random tranlation augmentation. Both groups use standard deviation normalization. Number in the brackets of test accuracy are the difference from the ResNet backbone to the SE-ResNet counterpart.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Model&lt;/th>
+&lt;th>Author&lt;/th>
+&lt;th>best test accuracy&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ResNet20v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>91.30%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet32v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>92.16%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet110v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>92.10%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet164v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>91.74%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet20 (γ=16)&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>91.70% (+0.4)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet32 (γ=16)&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>92.44% (+0.28)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet110 (γ=16)&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>86.56% (-5.54)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet164 (γ=16)&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>55.25% (-36.49)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet110 (γ=16)&lt;/td>
+&lt;td>J. Hu et al.&lt;/td>
+&lt;td>5.21 (94.79%) (+1.16)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet164 (γ=16)&lt;/td>
+&lt;td>J. Hu et al.&lt;/td>
+&lt;td>4.39 (95.61%) (+1.07)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Experiments on SE-ResNet20 and SE-ResNet32 show that SE module works well on enhancing the backbone network. But due to the backbone&amp;rsquo;s performance limitation (e.g., ResNet20), such enhancement is relatively limited. Training on SE-ResNet110 and SE-ResNet164 doesn&amp;rsquo;t converge, I&amp;rsquo;m still figuring out why.&lt;/p></description></item><item><title>Benchmark of ResNet on CIFAR-10</title><link>https://AI-Huang.github.io/research/benchmark_resnet/</link><pubDate>Tue, 29 Nov 2022 13:19:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/benchmark_resnet/</guid><description>&lt;p>This is a &lt;strong>TensorFlow&lt;/strong> replication of experiments on CIFAR-10 mentioned in ResNet (&lt;a href="https://arxiv.org/abs/1512.03385" target="_blank" rel="noopener">K. He, et al., Deep Residual Learning for Image Recognition&lt;/a>). My codes:&lt;/p>
 &lt;ul>
 &lt;li>Adapts Keras&amp;rsquo;s example codes of ResNet for CIFAR-10 (note that this is a simpler version specially designed for CIFAR-10);&lt;/li>
 &lt;li>Apply the SENet module to the ResNet;&lt;/li>
@@ -205,77 +275,7 @@ Models listed below are further used as benchmarks for SENet counterpart:&lt;/p>
 &lt;li>ResNet32v1_CIFAR10&lt;/li>
 &lt;li>ResNet110v1_CIFAR10&lt;/li>
 &lt;li>ResNet164v1_CIFAR10&lt;/li>
-&lt;/ul></description></item><item><title>Replication of SENet</title><link>https://AI-Huang.github.io/research/replication_senet/</link><pubDate>Tue, 22 Nov 2022 17:00:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/replication_senet/</guid><description>&lt;p>This is a replication of the work SENet (&lt;a href="https://arxiv.org/abs/1709.01507" target="_blank" rel="noopener">J. Hu, et al., Squeeze-and-Excitation Networks&lt;/a>). My codes:&lt;/p>
-&lt;ul>
-&lt;li>Implement the SENet module;&lt;/li>
-&lt;li>Apply the SENet module to the ResNet;&lt;/li>
-&lt;li>Train the ResNet with SENet on CIFAR-10;&lt;/li>
-&lt;li>Use the re-trained benchmark results of ResNet on CIFAR-10 for comparative evaluation.&lt;/li>
-&lt;/ul>
-&lt;p>For statistical validation, each group of experiment has been run for 5 times.&lt;/p>
-&lt;p>J. Hu et al.&amp;rsquo;s experiment group uses pad, crop and flip augmentation, while I use random tranlation augmentation. Both groups use standard deviation normalization. Number in the brackets of test accuracy are the difference from the ResNet backbone to the SE-ResNet counterpart.&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Model&lt;/th>
-&lt;th>Author&lt;/th>
-&lt;th>best test accuracy&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>ResNet20v1_CIFAR10&lt;/td>
-&lt;td>Kan&lt;/td>
-&lt;td>91.30%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ResNet32v1_CIFAR10&lt;/td>
-&lt;td>Kan&lt;/td>
-&lt;td>92.16%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ResNet110v1_CIFAR10&lt;/td>
-&lt;td>Kan&lt;/td>
-&lt;td>92.10%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ResNet164v1_CIFAR10&lt;/td>
-&lt;td>Kan&lt;/td>
-&lt;td>91.74%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>SE-ResNet20 (γ=16)&lt;/td>
-&lt;td>Kan&lt;/td>
-&lt;td>91.70% (+0.4)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>SE-ResNet32 (γ=16)&lt;/td>
-&lt;td>Kan&lt;/td>
-&lt;td>92.44% (+0.28)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>SE-ResNet110 (γ=16)&lt;/td>
-&lt;td>Kan&lt;/td>
-&lt;td>86.56% (-5.54)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>SE-ResNet164 (γ=16)&lt;/td>
-&lt;td>Kan&lt;/td>
-&lt;td>55.25% (-36.49)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>SE-ResNet110 (γ=16)&lt;/td>
-&lt;td>J. Hu et al.&lt;/td>
-&lt;td>5.21 (94.79%) (+1.16)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>SE-ResNet164 (γ=16)&lt;/td>
-&lt;td>J. Hu et al.&lt;/td>
-&lt;td>4.39 (95.61%) (+1.07)&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>Experiments on SE-ResNet20 and SE-ResNet32 show that SE module works well on enhancing the backbone network. But due to the backbone&amp;rsquo;s performance limitation (e.g., ResNet20), such enhancement is relatively limited. Training on SE-ResNet110 and SE-ResNet164 doesn&amp;rsquo;t converge, I&amp;rsquo;m still figuring out why.&lt;/p></description></item><item><title>Present at the Workshop on Applied Machine Learning Methods for Time Series Forecasting</title><link>https://AI-Huang.github.io/events/amlts22-cikm-workshop/</link><pubDate>Fri, 21 Oct 2022 08:00:00 -0400</pubDate><guid>https://AI-Huang.github.io/events/amlts22-cikm-workshop/</guid><description>&lt;p>We present our work &amp;ldquo;Kan Huang, Kai Zhang and Ming Liu. GreenEyes: An Air Quality Evaluating Model based on WaveNet&amp;rdquo; at the Workshop on Applied Machine Learning Methods for Time Series Forecasting (&lt;a href="https://www.cikm2022.org/workshops" target="_blank" rel="noopener">AMLTS'22&lt;/a>).&lt;/p>
+&lt;/ul></description></item><item><title>Present at the Workshop on Applied Machine Learning Methods for Time Series Forecasting</title><link>https://AI-Huang.github.io/events/amlts22-cikm-workshop/</link><pubDate>Fri, 21 Oct 2022 08:00:00 -0400</pubDate><guid>https://AI-Huang.github.io/events/amlts22-cikm-workshop/</guid><description>&lt;p>We present our work &amp;ldquo;Kan Huang, Kai Zhang and Ming Liu. GreenEyes: An Air Quality Evaluating Model based on WaveNet&amp;rdquo; at the Workshop on Applied Machine Learning Methods for Time Series Forecasting (&lt;a href="https://www.cikm2022.org/workshops" target="_blank" rel="noopener">AMLTS'22&lt;/a>).&lt;/p>
 &lt;figure id="figure-amlts22-presentation">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="AMLTS&amp;#39;22 Presentation" srcset="
