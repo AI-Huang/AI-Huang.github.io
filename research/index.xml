@@ -1,8 +1,216 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Research | Academic</title><link>https://AI-Huang.github.io/research/</link><atom:link href="https://AI-Huang.github.io/research/index.xml" rel="self" type="application/rss+xml"/><description>Research</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 22 Nov 2022 17:00:00 +0800</lastBuildDate><image><url>https://AI-Huang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Research</title><link>https://AI-Huang.github.io/research/</link></image><item><title>Replication of SENet</title><link>https://AI-Huang.github.io/research/replication_senet/</link><pubDate>Tue, 22 Nov 2022 17:00:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/replication_senet/</guid><description>&lt;p>This is a replication of the work SENet (&lt;a href="https://arxiv.org/abs/1709.01507" target="_blank" rel="noopener">J. Hu, et al., Squeeze-and-Excitation Networks&lt;/a>). My codes:&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Research | Academic</title><link>https://AI-Huang.github.io/research/</link><atom:link href="https://AI-Huang.github.io/research/index.xml" rel="self" type="application/rss+xml"/><description>Research</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 29 Nov 2022 13:19:00 +0800</lastBuildDate><image><url>https://AI-Huang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Research</title><link>https://AI-Huang.github.io/research/</link></image><item><title>Benchmark of ResNet on CIFAR-10</title><link>https://AI-Huang.github.io/research/benchmark_resnet/</link><pubDate>Tue, 29 Nov 2022 13:19:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/benchmark_resnet/</guid><description>&lt;p>This is a &lt;strong>TensorFlow&lt;/strong> replication of experiments on CIFAR-10 mentioned in ResNet (&lt;a href="https://arxiv.org/abs/1512.03385" target="_blank" rel="noopener">K. He, et al., Deep Residual Learning for Image Recognition&lt;/a>). My codes:&lt;/p>
+&lt;ul>
+&lt;li>Adapts Keras&amp;rsquo;s example codes of ResNet for CIFAR-10 (note that this is a simpler version specially designed for CIFAR-10);&lt;/li>
+&lt;li>Apply the SENet module to the ResNet;&lt;/li>
+&lt;li>Re-train the ResNet w/o SENet on CIFAR-10 for benchmark evaluation.&lt;/li>
+&lt;/ul>
+&lt;p>For statistical validatioin, each group of experiment has been run for 5 times.&lt;/p>
+&lt;p>Firstly, I try to reproduce the results with totally the same &lt;a href="https://github.com/AI-Huang/CV_Playground/blob/master/models/tf_fn/resnet_cifar10.py" target="_blank" rel="noopener">model codes&lt;/a> given by Keras. The batch size is set to 32. The optimizer is Adam with an initial learning rate 0.001. The validation split is 0, and the whole train set is used as training data. The data augmentation could be found at &lt;a href="https://github.com/AI-Huang/CV_Playground/blob/master/data_loaders/tf_fn/data_generator.py" target="_blank" rel="noopener">keras_augmentation&lt;/a>. The leanring scheduler could be found at &lt;a href="https://github.com/AI-Huang/CV_Playground/blob/master/models/tf_fn/optim_utils.py" target="_blank" rel="noopener">keras_lr_scheduler&lt;/a>. Our results outperform Keras&amp;rsquo;s on &lt;code>ResNet44v1_CIFAR10&lt;/code>, but go worse a little on other models.&lt;/p>
+&lt;p>ResNet20 keras_augmentation Adam 0.001 0 keras_lr_scheduler 0.9183&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Model&lt;/th>
+&lt;th>Author&lt;/th>
+&lt;th>best test accuracy&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ResNet20v1_CIFAR10&lt;/td>
+&lt;td>Keras&lt;/td>
+&lt;td>0.9216&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet20v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>0.9183&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet32v1_CIFAR10&lt;/td>
+&lt;td>Keras&lt;/td>
+&lt;td>0.9246&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet32v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>0.9227&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet44v1_CIFAR10&lt;/td>
+&lt;td>Keras&lt;/td>
+&lt;td>0.9250&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet44v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>0.9252&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet56v1_CIFAR10&lt;/td>
+&lt;td>Keras&lt;/td>
+&lt;td>0.9271&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet56v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>0.9236&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet110v1_CIFAR10&lt;/td>
+&lt;td>Keras&lt;/td>
+&lt;td>0.9265&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet110v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>0.9260&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Later, I follow the same configuration by K. He, et al., and use standard normalization. Random translation (padding, and then crop with a horizonal flip) is also applied. The validation split changes from 0 to 0.1 thus results in a 45k/5k train/val split. We follow the same optimizer settings. We use the SGD optimizer with an initial learning rate of 0.1, a momentum of 0.9, a weight decay of 0.0001 and finally a mini-batch size of 128.
+&lt;code>cifar10_scheduler&lt;/code> is applied. In original paper, learning rate is reduced by a factor 0.1 on some a step such as the 32k and 48k step. Here we convert these step indices into epoch indices by equation:
+$$ steps_per_epoch = \lceil \frac{45000}{batch_size} \rceil , $$
+$$ epoch_to_reduce_lr = \lceil \frac{32000|48000}{steps_per_epoch} \rceil . $$
+Thus we have an adapted schedule:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>steps (batchsize 128)&lt;/th>
+&lt;th>epoch&lt;/th>
+&lt;th>LR (SGD)&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>32k&lt;/td>
+&lt;td>1~91&lt;/td>
+&lt;td>0.1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>48k&lt;/td>
+&lt;td>92~137&lt;/td>
+&lt;td>0.01&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>64k&lt;/td>
+&lt;td>137~182&lt;/td>
+&lt;td>0.001&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The results are listed as the table below:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Model&lt;/th>
+&lt;th>pre-processing&lt;/th>
+&lt;th>data_augmentation&lt;/th>
+&lt;th>Author&lt;/th>
+&lt;th>best test accuracy&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ResNet20v1_CIFAR10&lt;/td>
+&lt;td>subtract_mean&lt;/td>
+&lt;td>pad_crop_flip&lt;/td>
+&lt;td>He et al.&lt;/td>
+&lt;td>91.25%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet20v1_CIFAR10&lt;/td>
+&lt;td>std_norm&lt;/td>
+&lt;td>random_translation&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>91.30%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet32v1_CIFAR10&lt;/td>
+&lt;td>subtract_mean&lt;/td>
+&lt;td>pad_crop_flip&lt;/td>
+&lt;td>He et al.&lt;/td>
+&lt;td>92.49%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet32v1_CIFAR10&lt;/td>
+&lt;td>std_norm&lt;/td>
+&lt;td>random_translation&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>92.16%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet44v1_CIFAR10&lt;/td>
+&lt;td>subtract_mean&lt;/td>
+&lt;td>pad_crop_flip&lt;/td>
+&lt;td>He et al.&lt;/td>
+&lt;td>92.83%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet44v1_CIFAR10&lt;/td>
+&lt;td>std_norm&lt;/td>
+&lt;td>random_translation&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet56v1_CIFAR10&lt;/td>
+&lt;td>subtract_mean&lt;/td>
+&lt;td>pad_crop_flip&lt;/td>
+&lt;td>He et al.&lt;/td>
+&lt;td>93.03%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet56v1_CIFAR10&lt;/td>
+&lt;td>std_norm&lt;/td>
+&lt;td>random_translation&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet110v1_CIFAR10&lt;/td>
+&lt;td>subtract_mean&lt;/td>
+&lt;td>pad_crop_flip&lt;/td>
+&lt;td>He et al.&lt;/td>
+&lt;td>93.39+-.16%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet110v1_CIFAR10&lt;/td>
+&lt;td>std_norm&lt;/td>
+&lt;td>random_translation&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>0.9210&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet164v1_CIFAR10&lt;/td>
+&lt;td>subtract_mean&lt;/td>
+&lt;td>pad_crop_flip&lt;/td>
+&lt;td>He et al.&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet164v1_CIFAR10&lt;/td>
+&lt;td>std_norm&lt;/td>
+&lt;td>random_translation&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>0.9174&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The main difference between &lt;code>random_translation&lt;/code> and &lt;code>pad_crop_flip&lt;/code> is that the former supply with a new &lt;code>fill_mode='nearest'&lt;/code>.
+Among the model that both He et al. and me have the results, our results only outperform He&amp;rsquo;s on ResNet20v1_CIFAR10, and are not as good as He claims on ResNet32v1_CIFAR10 and ResNet110v1_CIFAR10.
+Models listed below are further used as benchmarks for SENet counterpart:&lt;/p>
+&lt;ul>
+&lt;li>ResNet20v1_CIFAR10&lt;/li>
+&lt;li>ResNet32v1_CIFAR10&lt;/li>
+&lt;li>ResNet110v1_CIFAR10&lt;/li>
+&lt;li>ResNet164v1_CIFAR10&lt;/li>
+&lt;/ul></description></item><item><title>Replication of SENet</title><link>https://AI-Huang.github.io/research/replication_senet/</link><pubDate>Tue, 22 Nov 2022 17:00:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/replication_senet/</guid><description>&lt;p>This is a replication of the work SENet (&lt;a href="https://arxiv.org/abs/1709.01507" target="_blank" rel="noopener">J. Hu, et al., Squeeze-and-Excitation Networks&lt;/a>). My codes:&lt;/p>
 &lt;ul>
 &lt;li>Implement the SENet module;&lt;/li>
 &lt;li>Apply the SENet module to the ResNet;&lt;/li>
-&lt;li>Re-train the ResNet w/o SENet on CIFAR-10 for benchmark evaluation.&lt;/li>
+&lt;li>Train the ResNet with SENet on CIFAR-10;&lt;/li>
+&lt;li>Use the re-trained benchmark results of ResNet on CIFAR-10 for comparative evaluation.&lt;/li>
 &lt;/ul></description></item><item><title>GreenEyes: An Air Quality Evaluating Model based on WaveNet</title><link>https://AI-Huang.github.io/research/greeneyes/</link><pubDate>Sun, 18 Sep 2022 21:14:15 +0800</pubDate><guid>https://AI-Huang.github.io/research/greeneyes/</guid><description>&lt;p>Accepted by &lt;em>&lt;a href="https://AI-Huang.github.io/publication/amlts2022/">AMLTS 2022&lt;/a>&lt;/em>.&lt;/p>
 &lt;p>Presentation available at &lt;a href="https://AI-Huang.github.io/events/amlts22-cikm-workshop/">AMLTS 2022 Workshop&lt;/a>.&lt;/p></description></item><item><title>RMNIST/N: Train MNIST dataset with only TEN samples</title><link>https://AI-Huang.github.io/research/rmnist_n/</link><pubDate>Tue, 09 Aug 2022 22:02:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/rmnist_n/</guid><description>&lt;p>&lt;a href="https://cognitivemedium.com/rmnist" target="_blank" rel="noopener">RMNIST/N&lt;/a> is a dataset that reduces MNIST with N examples for each digit class. In this way, RMNIST/1 has 1 training example for each digit, for a total of only 10 training examples. This article presents how a digits recognizer can be trained on only ten samples from the whole MNIST dataset. Data augmentation is used during the training. Ablation study is also made.&lt;/p></description></item><item><title>Image Compression with Flow Models</title><link>https://AI-Huang.github.io/research/flow_model/</link><pubDate>Tue, 18 May 2021 16:58:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/flow_model/</guid><description>&lt;ul>
 &lt;li>Found new approaches of using flow models to do compression tasks for image‐like data. Wrote processing and feature extracting functions for 80K+ target data. Tested VQ‐VAE and basic Real NVP model to build unsupervising learning baselines;&lt;/li>
@@ -22,4 +230,4 @@
 &lt;li>Uses beam search algorithm to generate output;&lt;/li>
 &lt;li>Supplys a dialogue robot backend for the Chatbot.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;a href="https://AI-Huang.github.io/projects/seq2seq_qq_chatbot/">Other parts of the Chatbot&lt;/a>.&lt;/p></description></item><item><title/><link>https://AI-Huang.github.io/research/benchmark_resnet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AI-Huang.github.io/research/benchmark_resnet/</guid><description/></item></channel></rss>
+&lt;p>&lt;a href="https://AI-Huang.github.io/projects/seq2seq_qq_chatbot/">Other parts of the Chatbot&lt;/a>.&lt;/p></description></item></channel></rss>
