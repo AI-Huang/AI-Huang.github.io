@@ -4,6 +4,70 @@
 &lt;li>Apply the SENet module to the ResNet;&lt;/li>
 &lt;li>Train the ResNet with SENet on CIFAR-10;&lt;/li>
 &lt;li>Use the re-trained benchmark results of ResNet on CIFAR-10 for comparative evaluation.&lt;/li>
-&lt;/ul></description></item><item><title>A TensorFlow Implementation of AdderNet</title><link>https://AI-Huang.github.io/research/addernet_tensorflow/</link><pubDate>Fri, 29 Jan 2021 17:00:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/addernet_tensorflow/</guid><description>&lt;p>This is a A TensorFlow Implementation of AdderNet. The original paper, AdderNet (&lt;a href="https://arxiv.org/abs/1912.13200" target="_blank" rel="noopener">H. Chen, et al., AdderNet: Do We Really Need Multiplications in Deep Learning?&lt;/a>), is implemented with PyTorch. Here we provide a TensorFlow alternative for training and evaluating the Adder layer operator and related network backbones.&lt;/p>
+&lt;/ul>
+&lt;p>For statistical validation, each group of experiment has been run for 5 times.&lt;/p>
+&lt;p>J. Hu et al.&amp;rsquo;s experiment group uses pad, crop and flip augmentation, while I use random tranlation augmentation. Both groups use standard deviation normalization. Number in the brackets of test accuracy are the difference from the ResNet backbone to the SE-ResNet counterpart.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Model&lt;/th>
+&lt;th>Author&lt;/th>
+&lt;th>best test accuracy&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ResNet20v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>91.30%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet32v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>92.16%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet110v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>92.10%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet164v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>91.74%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet20 (γ=16)&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>91.70% (+0.4)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet32 (γ=16)&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>92.44% (+0.28)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet110 (γ=16)&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>86.56% (-5.54)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet164 (γ=16)&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>55.25% (-36.49)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet110 (γ=16)&lt;/td>
+&lt;td>J. Hu et al.&lt;/td>
+&lt;td>5.21 (94.79%) (+1.16)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet164 (γ=16)&lt;/td>
+&lt;td>J. Hu et al.&lt;/td>
+&lt;td>4.39 (95.61%) (+1.07)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Experiments on SE-ResNet20 and SE-ResNet32 show that SE module works well on enhancing the backbone network. But due to the backbone&amp;rsquo;s performance limitation (e.g., ResNet20), such enhancement is relatively limited. Training on SE-ResNet110 and SE-ResNet164 doesn&amp;rsquo;t converge, I&amp;rsquo;m still figuring out why.&lt;/p></description></item><item><title>A TensorFlow Implementation of AdderNet</title><link>https://AI-Huang.github.io/research/addernet_tensorflow/</link><pubDate>Fri, 29 Jan 2021 17:00:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/addernet_tensorflow/</guid><description>&lt;p>This is a A TensorFlow Implementation of AdderNet. The original paper, AdderNet (&lt;a href="https://arxiv.org/abs/1912.13200" target="_blank" rel="noopener">H. Chen, et al., AdderNet: Do We Really Need Multiplications in Deep Learning?&lt;/a>), is implemented with PyTorch. Here we provide a TensorFlow alternative for training and evaluating the Adder layer operator and related network backbones.&lt;/p>
 &lt;p>The codes is available (click the &amp;ldquo;Codes&amp;rdquo; button).&lt;/p></description></item><item><title>AdderNet Presentation</title><link>https://AI-Huang.github.io/research/addernet_presentation/</link><pubDate>Fri, 29 Jan 2021 17:00:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/addernet_presentation/</guid><description>&lt;p>This is a paper digest sharing presentation in the reading group. The featured paper is AdderNet (&lt;a href="https://arxiv.org/abs/1912.13200" target="_blank" rel="noopener">H. Chen, et al., AdderNet: Do We Really Need Multiplications in Deep Learning?&lt;/a>).&lt;/p>
 &lt;p>Presentation slides is available (click the &amp;ldquo;Slides&amp;rdquo; button).&lt;/p></description></item></channel></rss>

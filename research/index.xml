@@ -4,7 +4,7 @@
 &lt;li>Apply the SENet module to the ResNet;&lt;/li>
 &lt;li>Re-train the ResNet w/o SENet on CIFAR-10 for benchmark evaluation.&lt;/li>
 &lt;/ul>
-&lt;p>For statistical validatioin, each group of experiment has been run for 5 times.&lt;/p>
+&lt;p>For statistical validation, each group of experiment has been run for 5 times.&lt;/p>
 &lt;p>Firstly, I try to reproduce the results with totally the same &lt;a href="https://github.com/AI-Huang/CV_Playground/blob/master/models/tf_fn/resnet_cifar10.py" target="_blank" rel="noopener">model codes&lt;/a> given by Keras. The batch size is set to 32. The optimizer is Adam with an initial learning rate 0.001. The validation split is 0, and the whole train set is used as training data. The data augmentation could be found at &lt;a href="https://github.com/AI-Huang/CV_Playground/blob/master/data_loaders/tf_fn/data_generator.py" target="_blank" rel="noopener">keras_augmentation&lt;/a>. The leanring scheduler could be found at &lt;a href="https://github.com/AI-Huang/CV_Playground/blob/master/models/tf_fn/optim_utils.py" target="_blank" rel="noopener">keras_lr_scheduler&lt;/a>. Our results outperform Keras&amp;rsquo;s on &lt;code>ResNet44v1_CIFAR10&lt;/code>, but go worse a little on other models.&lt;/p>
 &lt;p>ResNet20 keras_augmentation Adam 0.001 0 keras_lr_scheduler 0.9183&lt;/p>
 &lt;table>
@@ -211,7 +211,71 @@ Models listed below are further used as benchmarks for SENet counterpart:&lt;/p>
 &lt;li>Apply the SENet module to the ResNet;&lt;/li>
 &lt;li>Train the ResNet with SENet on CIFAR-10;&lt;/li>
 &lt;li>Use the re-trained benchmark results of ResNet on CIFAR-10 for comparative evaluation.&lt;/li>
-&lt;/ul></description></item><item><title>GreenEyes: An Air Quality Evaluating Model based on WaveNet</title><link>https://AI-Huang.github.io/research/greeneyes/</link><pubDate>Sun, 18 Sep 2022 21:14:15 +0800</pubDate><guid>https://AI-Huang.github.io/research/greeneyes/</guid><description>&lt;p>Accepted by &lt;em>&lt;a href="https://AI-Huang.github.io/publication/amlts2022/">AMLTS 2022&lt;/a>&lt;/em>.&lt;/p>
+&lt;/ul>
+&lt;p>For statistical validation, each group of experiment has been run for 5 times.&lt;/p>
+&lt;p>J. Hu et al.&amp;rsquo;s experiment group uses pad, crop and flip augmentation, while I use random tranlation augmentation. Both groups use standard deviation normalization. Number in the brackets of test accuracy are the difference from the ResNet backbone to the SE-ResNet counterpart.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Model&lt;/th>
+&lt;th>Author&lt;/th>
+&lt;th>best test accuracy&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ResNet20v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>91.30%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet32v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>92.16%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet110v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>92.10%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ResNet164v1_CIFAR10&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>91.74%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet20 (γ=16)&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>91.70% (+0.4)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet32 (γ=16)&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>92.44% (+0.28)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet110 (γ=16)&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>86.56% (-5.54)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet164 (γ=16)&lt;/td>
+&lt;td>Kan&lt;/td>
+&lt;td>55.25% (-36.49)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet110 (γ=16)&lt;/td>
+&lt;td>J. Hu et al.&lt;/td>
+&lt;td>5.21 (94.79%) (+1.16)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SE-ResNet164 (γ=16)&lt;/td>
+&lt;td>J. Hu et al.&lt;/td>
+&lt;td>4.39 (95.61%) (+1.07)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Experiments on SE-ResNet20 and SE-ResNet32 show that SE module works well on enhancing the backbone network. But due to the backbone&amp;rsquo;s performance limitation (e.g., ResNet20), such enhancement is relatively limited. Training on SE-ResNet110 and SE-ResNet164 doesn&amp;rsquo;t converge, I&amp;rsquo;m still figuring out why.&lt;/p></description></item><item><title>GreenEyes: An Air Quality Evaluating Model based on WaveNet</title><link>https://AI-Huang.github.io/research/greeneyes/</link><pubDate>Sun, 18 Sep 2022 21:14:15 +0800</pubDate><guid>https://AI-Huang.github.io/research/greeneyes/</guid><description>&lt;p>Accepted by &lt;em>&lt;a href="https://AI-Huang.github.io/publication/amlts2022/">AMLTS 2022&lt;/a>&lt;/em>.&lt;/p>
 &lt;p>Presentation available at &lt;a href="https://AI-Huang.github.io/events/amlts22-cikm-workshop/">AMLTS 2022 Workshop&lt;/a>.&lt;/p></description></item><item><title>RMNIST/N: Train MNIST dataset with only TEN samples</title><link>https://AI-Huang.github.io/research/rmnist_n/</link><pubDate>Tue, 09 Aug 2022 22:02:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/rmnist_n/</guid><description>&lt;p>&lt;a href="https://cognitivemedium.com/rmnist" target="_blank" rel="noopener">RMNIST/N&lt;/a> is a dataset that reduces MNIST with N examples for each digit class. In this way, RMNIST/1 has 1 training example for each digit, for a total of only 10 training examples. This article presents how a digits recognizer can be trained on only ten samples from the whole MNIST dataset. Data augmentation is used during the training. Ablation study is also made.&lt;/p></description></item><item><title>Image Compression with Flow Models</title><link>https://AI-Huang.github.io/research/flow_model/</link><pubDate>Tue, 18 May 2021 16:58:00 +0800</pubDate><guid>https://AI-Huang.github.io/research/flow_model/</guid><description>&lt;ul>
 &lt;li>Found new approaches of using flow models to do compression tasks for image‐like data. Wrote processing and feature extracting functions for 80K+ target data. Tested VQ‐VAE and basic Real NVP model to build unsupervising learning baselines;&lt;/li>
 &lt;li>Based on open source codes, wrote hundreds lines of extra codes to restore Real NVP Compression model introduced by the SOTA papers. Did experiments with different feature extractors on the 80K+ 2D data; it turned out that the permutations of pixels will influence the results;&lt;/li>

@@ -4,7 +4,7 @@
 &lt;li>Apply the SENet module to the ResNet;&lt;/li>
 &lt;li>Re-train the ResNet w/o SENet on CIFAR-10 for benchmark evaluation.&lt;/li>
 &lt;/ul>
-&lt;p>For statistical validatioin, each group of experiment has been run for 5 times.&lt;/p>
+&lt;p>For statistical validation, each group of experiment has been run for 5 times.&lt;/p>
 &lt;p>Firstly, I try to reproduce the results with totally the same &lt;a href="https://github.com/AI-Huang/CV_Playground/blob/master/models/tf_fn/resnet_cifar10.py" target="_blank" rel="noopener">model codes&lt;/a> given by Keras. The batch size is set to 32. The optimizer is Adam with an initial learning rate 0.001. The validation split is 0, and the whole train set is used as training data. The data augmentation could be found at &lt;a href="https://github.com/AI-Huang/CV_Playground/blob/master/data_loaders/tf_fn/data_generator.py" target="_blank" rel="noopener">keras_augmentation&lt;/a>. The leanring scheduler could be found at &lt;a href="https://github.com/AI-Huang/CV_Playground/blob/master/models/tf_fn/optim_utils.py" target="_blank" rel="noopener">keras_lr_scheduler&lt;/a>. Our results outperform Keras&amp;rsquo;s on &lt;code>ResNet44v1_CIFAR10&lt;/code>, but go worse a little on other models.&lt;/p>
 &lt;p>ResNet20 keras_augmentation Adam 0.001 0 keras_lr_scheduler 0.9183&lt;/p>
 &lt;table>
