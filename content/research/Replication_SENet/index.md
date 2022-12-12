@@ -6,7 +6,7 @@ summary: ""
 authors: [Kan Huang]
 tags: [Replication, SENet, Computer Vision]
 categories: []
-date: 2022-11-22T17:00:00+08:00
+date: 2022-12-01T17:28:00+08:00
 # Optional external URL for project (replaces project detail page).
 external_link: ""
 
@@ -43,4 +43,24 @@ This is a replication of the work SENet ([J. Hu, et al., Squeeze-and-Excitation 
 
 - Implement the SENet module;
 - Apply the SENet module to the ResNet;
-- Re-train the ResNet w/o SENet on CIFAR-10 for benchmark evaluation.
+- Train the ResNet with SENet on CIFAR-10;
+- Use the re-trained benchmark results of ResNet on CIFAR-10 for comparative evaluation.
+
+For statistical validation, each group of experiment has been run for 5 times.
+
+J. Hu et al.'s experiment group uses pad, crop and flip augmentation, while I use random tranlation augmentation. Both groups use standard deviation normalization. Number in the brackets of test accuracy are the difference from the ResNet backbone to the SE-ResNet counterpart.
+
+| Model               | Author       | best test accuracy    |
+| ------------------- | ------------ | --------------------- |
+| ResNet20v1_CIFAR10  | Kan          | 91.30%                |
+| ResNet32v1_CIFAR10  | Kan          | 92.16%                |
+| ResNet110v1_CIFAR10 | Kan          | 92.10%                |
+| ResNet164v1_CIFAR10 | Kan          | 91.74%                |
+| SE-ResNet20 (γ=16)  | Kan          | 91.70% (+0.4)         |
+| SE-ResNet32 (γ=16)  | Kan          | 92.44% (+0.28)        |
+| SE-ResNet110 (γ=16) | Kan          | 86.56% (-5.54)        |
+| SE-ResNet164 (γ=16) | Kan          | 55.25% (-36.49)       |
+| SE-ResNet110 (γ=16) | J. Hu et al. | 5.21 (94.79%) (+1.16) |
+| SE-ResNet164 (γ=16) | J. Hu et al. | 4.39 (95.61%) (+1.07) |
+
+Experiments on SE-ResNet20 and SE-ResNet32 show that SE module works well on enhancing the backbone network. But due to the backbone's performance limitation (e.g., ResNet20), such enhancement is relatively limited. Training on SE-ResNet110 and SE-ResNet164 doesn't converge, I'm still figuring out why.
